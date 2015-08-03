@@ -11,7 +11,8 @@ angular.module('bmiApp')
       {from: 31, to: 35, label: 'Obese Class I (Moderately obese)'},
       {from: 36, to: 40, label: 'Obese Class II (Severely obese)'},
       {from: 41, to: Infinity, label: 'Obese Class III (Very severely obese)'},
-    ]
+    ];
+
     $scope.bmi = null;
     $scope.calcBMI = function() {
       $scope.bmi = $scope.weight / Math.pow($scope.height, 2);
