@@ -1,0 +1,32 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Calculate your Body Mass Index</h3>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <form class="form-inline">
+        <div class="form-group">
+          <label class="sr-only">Weight(Kg)</label>
+          <input type="text" class="form-control" placeholder="Weight(Kg)" ng-model="weight">
+        </div>
+        <div class="form-group">
+          <label class="sr-only">Height(Meters)</label>
+          <input type="text" class="form-control" placeholder="Height(Meters)" ng-model="height">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="calcBMI()">Get BMI</button>
+      </form>
+    </div>
+  </div>
+  <div class="row" ng-if="bmi">
+    <div class="col-xs-12">
+      <p>Your BMI is: <strong>{{bmi}}</strong></p>
+      <p>Your BMI Category is is: <strong>{{category.label}}</strong></p>
+    </div>
+  </div>
+</div>
+
